@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    
+    // MARK: - Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
