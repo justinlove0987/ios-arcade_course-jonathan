@@ -5,10 +5,11 @@
 //  Created by justin on 2022/5/2.
 //
 
-import Foundation
-
-
 import UIKit
+
+protocol OnboardingContainerViewControllerDelegate: AnyObject {
+    func didFinishingOnboarding()
+}
 
 class OnboardingContainerViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class OnboardingContainerViewController: UIViewController {
     var pages = [UIViewController]()
     var currentVC: UIViewController
     let closeButton = UIButton(type: .system)
+    
+    weak var delegate: OnboardingContainerViewControllerDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -121,5 +124,6 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 extension OnboardingContainerViewController {
     @objc func closeTapped(_ sender: UIButton) {
         // TODO
+        delegate?.didFinishingOnboarding()
     }
 }
