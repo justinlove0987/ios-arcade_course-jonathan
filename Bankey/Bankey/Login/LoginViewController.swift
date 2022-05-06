@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     private func style() {
         loginView.translatesAutoresizingMaskIntoConstraints = false
+        loginView.usernameTextField.text = "Justin"
+        loginView.passwordTextField.text = "Welcome"
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.configuration = .filled()
