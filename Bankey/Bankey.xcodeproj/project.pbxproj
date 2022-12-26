@@ -22,6 +22,8 @@
 		D090DA94282D041600F69551 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D090DA93282D041600F69551 /* AccountSummaryHeaderView.xib */; };
 		D090DA98282E331600F69551 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090DA97282E331600F69551 /* AccountSummaryCell.swift */; };
 		D092F9972935FB2C003D4B2E /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092F9962935FB2B003D4B2E /* ShakeyBellView.swift */; };
+		D0A6C85029598397002BB275 /* ProfileManageer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6C84F29598397002BB275 /* ProfileManageer.swift */; };
+		D0A6C85229598548002BB275 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6C85129598548002BB275 /* AccountSummaryViewControllerTests.swift */; };
 		D0A6ECAF283747A20054EBB8 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6ECAE283747A20054EBB8 /* Decimal+Utils.swift */; };
 		D0A6ECB1283747F10054EBB8 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6ECB0283747F10054EBB8 /* CurrencyFormatter.swift */; };
 		D0A6ED622845FF840054EBB8 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6ED612845FF840054EBB8 /* CurrencyFormatterTests.swift */; };
@@ -62,6 +64,8 @@
 		D090DA93282D041600F69551 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		D090DA97282E331600F69551 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		D092F9962935FB2B003D4B2E /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		D0A6C84F29598397002BB275 /* ProfileManageer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManageer.swift; sourceTree = "<group>"; };
+		D0A6C85129598548002BB275 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		D0A6ECAE283747A20054EBB8 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		D0A6ECB0283747F10054EBB8 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		D0A6ED582845FEEB0054EBB8 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +137,7 @@
 			children = (
 				D075CAF5293EEB3C00C36AE5 /* ProfileTest.swift */,
 				D075CAF7293EEBE700C36AE5 /* AccountTests.swift */,
+				D0A6C85129598548002BB275 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				D075CAE4293EDE4300C36AE5 /* AccountSummaryViewController+Networking.swift */,
 				D090DA95282E32CA00F69551 /* Header */,
 				D090DA96282E32E600F69551 /* Cells */,
+				D0A6C84E29598377002BB275 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				D092F9962935FB2B003D4B2E /* ShakeyBellView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D0A6C84E29598377002BB275 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D0A6C84F29598397002BB275 /* ProfileManageer.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D0A6ED592845FEEB0054EBB8 /* BankeyUnitTests */ = {
@@ -342,6 +356,7 @@
 				D0A6ED622845FF840054EBB8 /* CurrencyFormatterTests.swift in Sources */,
 				D075CAF8293EEBE700C36AE5 /* AccountTests.swift in Sources */,
 				D075CAF6293EEB3C00C36AE5 /* ProfileTest.swift in Sources */,
+				D0A6C85229598548002BB275 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				D05BDE152829054500C4BEE0 /* UIViewController+Utils.swift in Sources */,
 				D0CA3B8B295042F100AC4372 /* SkeletonCell.swift in Sources */,
 				D075CAE3293EDD6100C36AE5 /* Date+Utils.swift in Sources */,
+				D0A6C85029598397002BB275 /* ProfileManageer.swift in Sources */,
 				D0BC65A4280EB9CA0023051D /* LoginView.swift in Sources */,
 				D05BDE13282522C600C4BEE0 /* LocalState.swift in Sources */,
 				D090DA92282D03DA00F69551 /* AccountSummaryHeaderView.swift in Sources */,
