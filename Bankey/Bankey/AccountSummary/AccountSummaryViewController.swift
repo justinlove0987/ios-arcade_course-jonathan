@@ -44,7 +44,7 @@ extension AccountSummaryViewController {
         setupTableHeaderView()
         setupRefreshControl()
         setupSkeletons()
-        fetchDataAndLoadViews()
+        fetchData()
 
         // fetchAccounts()
     }
@@ -124,7 +124,7 @@ extension AccountSummaryViewController: UITableViewDelegate {
 
 // MARK: - Networking
 extension AccountSummaryViewController {
-    private func fetchDataAndLoadViews() {
+    private func fetchData() {
         let group = DispatchGroup()
 
         // Testing - random number selection
@@ -136,7 +136,7 @@ extension AccountSummaryViewController {
             case .success(let profile):
                 self.profile = profile
             case .failure(let error):
-                print(error.localizedDescription)
+                self.displayError(error)
             }
             group.leave()
         }
@@ -148,7 +148,7 @@ extension AccountSummaryViewController {
                 self.accounts = accounts
                 self.configureTableCells(with: accounts)
             case .failure(let error):
-                print(error.localizedDescription)
+                self.displayError(error)
             }
             group.leave()
         }
@@ -179,6 +179,34 @@ extension AccountSummaryViewController {
                                          balance: $0.amount)
         }
     }
+
+    private func displayError(_ error: NetworkError) {
+        let title: String
+        let message: String
+
+        switch error {
+        case .decodingError:
+            title = "Decoding Error"
+            message = "We could not process your request. Please try again."
+
+        case .serverError:
+            title = "Server Error"
+            message = "Ensure you are connected to the internet. Please try again."
+        }
+
+        self.showErrorAlert(title: title, message: message)
+    }
+
+    private func showErrorAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+        present(alert, animated: true, completion: nil)
+    }
+
 }
 
 
@@ -192,7 +220,7 @@ extension AccountSummaryViewController {
         reset()
         setupSkeletons()
         tableView.reloadData()
-        fetchDataAndLoadViews()
+        fetchData()
     }
 
     private func reset() {
