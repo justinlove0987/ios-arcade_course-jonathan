@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class AccountSummaryViewController: UIViewController {
 
     // Request Models
